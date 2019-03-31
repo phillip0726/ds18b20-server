@@ -9,10 +9,10 @@
 
 ### Node.js Code (http://3.18.107.250:3000)
 - Using bootstrap when configuring Web pages.
-- index.html    : Main page       ex) http://3.18.107.250:3000
+- index.html    : Main page       "http://3.18.107.250:3000"
 - top_menu.html : Navbar
-- dump.html     : Import and display data from within the database. ex) http://3.18.107.250:3000/dump?count=45
-- graph.html    : Visualize data  ex) http://3.18.107.250:3000/graph
+- dump.html     : Import and display data from within the database. "http://3.18.107.250:3000/dump?count=45"
+- graph.html    : Visualize data  "http://3.18.107.250:3000/graph"
 </br>
 
 ### Result
