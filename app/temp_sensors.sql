@@ -1,0 +1,6 @@
+CREATE TABLE temp_sensors (
+    idx INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id VARCHAR(50) NOT NULL,
+    temp FLOAT NOT NULL,
+    `time` TIMESTAMP NOT NULL
+);
