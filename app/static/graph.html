@@ -1,0 +1,97 @@
+<html>
+  <head>
+	<meta charset = "UTF-8">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        <%HEADER%>
+        data.addRows([
+            <%DATA%>
+        ]);
+		var format = new google.visualization.DateFormat({
+			pattern : 'M/d/yy HH:mm'
+		});
+		format.format(data,0);
+        var options = {
+            
+            title: 'My Room temperature',
+
+			titleTextStyle : {
+			
+				fontName : 'Arial',
+				fontSize : 40
+			},
+            width : 1024, 
+            height : 512, 
+			
+			hAxis :{
+				title : 'Date (M/d/YY)',
+				format : 'M/d/yy HH:mm'
+			},
+			vAxis :{
+				title : 'Temp (Celsius)',
+				format : '##.##'
+			},
+		
+			pointShape : {type : 'circle' }
+			
+			
+			
+        };
+		
+		var chart = new google.visualization.AreaChart(document.getElementById('line_top_x'));
+		chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+	  <%include%>
+	  <div calss=container" style = "margin-top:50px">
+		<div class="row">
+			<div class="col-sm-1 pt-4"></div>
+			<div class="col-sm-8 pt-4">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Start Time</th>
+							<th>End Time</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><%id%></td>
+							<td><%start%></td>
+							<td><%end%></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-sm-3 pt-4"></div>
+		</div> 
+		<div id="line_top_x" ></div>
+		<div class="row">
+			<div class="col-sm-1 pt-4"></div>
+			<div class="col-sm-11 pt-4">
+			
+				<h5>
+					Arduino Code : <a href="https://github.com/phillip0726/ds18b20-server/blob/master/arduino/ds18b20-thingspeak-server.ino">https://github.com/phillip0726/ds18b20-server/blob/master/arduino/ds18b20-thingspeak-server.ino</a>
+				</h>
+				<h5>
+					Node.js Code : <a href="https://github.com/phillip0726/ds18b20-server/blob/master/app/app.js">https://github.com/phillip0726/ds18b20-server/blob/master/app/app.js</div>
+				</h>
+			</div>
+		</div>
+	  </div>
+	  <div style="margin-bottom:50px"></div>
+  </body>
+</html>
