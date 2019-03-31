@@ -15,5 +15,5 @@
 - graph.html    : Visualize data  "http://3.18.107.250:3000/graph"
 </br>
 
-### Result
+### Screenshot
 - aaa
