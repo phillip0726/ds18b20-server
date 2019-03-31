@@ -1,0 +1,34 @@
+<html>
+  <head>
+		<meta charset = "UTF-8">	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  </head>
+  <body>
+	  <%include%>
+		<div calss=container" style = "margin-top:50px">
+			<div class="row">
+				<div class="col-sm-2 pt-4"></div>
+				<div class="col-sm-8 pt-4">
+					<table class="table table-hover">
+						<thead>
+							<th>Index</th>
+							<th>Date(YYYYMMDD)</th>
+							<th>Time(HH:mm)</th>
+							<th>Temp(Celsius)</th>
+						</thead>
+						<tbody>
+							<%td_loop%>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-sm-2 pt-4"></div>
+				</div>
+			</div>
+	  </div>
+  </body>
+</html>
