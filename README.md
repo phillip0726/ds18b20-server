@@ -7,12 +7,12 @@
 - Once to the server and once to the Thingspeak.
 </br>
 
-### Node.js Code (http://3.18.107.250:3000)
+### Node.js Code
 - Using bootstrap when configuring Web pages.
-- index.html    : Main page       "http://3.18.107.250:3000"
+- index.html    : Main page       
 - top_menu.html : Navbar
-- dump.html     : Import and display data from within the database. "http://3.18.107.250:3000/dump?count=45"
-- graph.html    : Visualize data  "http://3.18.107.250:3000/graph"
+- dump.html     : Import and display data from within the database.
+- graph.html    : Visualize data
 </br>
 
 ### Screenshot
